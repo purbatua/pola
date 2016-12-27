@@ -17,6 +17,8 @@ namespace PolaC4._5_MetroUI
         public Main()
         {
             InitializeComponent();
+            MainTab.SelectedIndex = 0;
+
             if (!db.LoadToDataGrid("nasabah", DataGridNasabah))
                 MessageBox.Show("Gagal menampilkan data nasabah di data grid");
         }
@@ -65,10 +67,6 @@ namespace PolaC4._5_MetroUI
 
         private void linkAdd_Click(object sender, EventArgs e)
         {
-            //NasabahForm formCreate = new NasabahForm(this);
-            //formCreate.ShowDialog();
-            //formCreate.Dispose();
-
             NasabahForm formNasabah = new NasabahForm(this);
             formNasabah.ShowDialog();
             formNasabah.Dispose();
@@ -99,6 +97,67 @@ namespace PolaC4._5_MetroUI
         {
             //Console.Write("REFRESH");
             db.LoadToDataGrid("nasabah", DataGridNasabah);
+        }
+
+        private void tabTransformasi_Click(object sender, EventArgs e)
+        {
+            db.LoadToDataGrid("nasabah_trans", DataGridNasabahTransformasi);
+        }
+
+        private void MainTab_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            linkAdd.Visible = false;
+            linkEdit.Visible = false;
+            linkDelete.Visible = false;
+
+            int index = MainTab.SelectedIndex;
+
+            switch (index)
+            {
+                case 0:
+                        linkAdd.Visible = true;
+                        linkEdit.Visible = true;
+                        linkDelete.Visible = true;
+                    break;
+                case 1:
+                    //MetroFramework.MetroMessageBox.Show(this, "TEST");
+                    db.LoadToDataGrid("nasabah_trans", DataGridNasabahTransformasi);
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void checkTrainingAcak_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkTrainingAcak.Checked)
+            {
+                tbDataTraining.Enabled = false;
+                btnSimpanTraining.Enabled = false;
+            }
+            else
+            {
+                tbDataTraining.Enabled = true;
+                btnSimpanTraining.Enabled = true;
+            }
+        }
+
+        private void checkTestingAcak_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkTestingAcak.Checked)
+            {
+                tbDataTesting.Enabled = false;
+                btnSimpanTesting.Enabled = false;
+            }
+            else
+            {
+                tbDataTesting.Enabled = true;
+                btnSimpanTesting.Enabled = true;
+            }
         }
     }
 }

@@ -334,6 +334,32 @@ namespace PolaC4._5_MetroUI
             return count;
         }
 
+        public int count(string tabel, string where)
+        {
+            string query = "SELECT COUNT(*) FROM " + tabel + " WHERE " + where;
+            int count = 0;
+
+            try
+            {
+                if (openConnection())
+                {
+                    MySqlCommand command = new MySqlCommand(query, connect);
+                    count = int.Parse(command.ExecuteScalar().ToString());
+                }
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(e.Message);
+                count = 0;
+            }
+            finally
+            {
+                closeConnection();
+            }
+
+            return count;
+        }
+
         public int id(string tabel)
         {
             int id = 1;
