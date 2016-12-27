@@ -9,19 +9,19 @@ namespace PolaC4._5_MetroUI
     {
         public string umur(int u)
         {
-            string umur = "muda";
+            string umur = "Muda";
 
             if (u >= 17 && u <= 40)
             {
-                umur = "muda";
+                umur = "Muda";
             }
             else if (u >= 41 && u <= 55)
             {
-                umur = "paruh baya";
+                umur = "Paruh Baya";
             }
             else if (u > 55)
             {
-                umur = "tua";
+                umur = "Tua";
             }
 
             return umur;
@@ -29,19 +29,19 @@ namespace PolaC4._5_MetroUI
 
         public string pinjaman(int p)
         {
-            string pinjaman = "kecil";
+            string pinjaman = "Kecil";
 
             if(p >= 1000000 && p <= 5000000)
             {
-                pinjaman = "kecil";
+                pinjaman = "Kecil";
             }
             else if(p >= 5000001 && p <= 10000000)
             {
-                pinjaman = "sedang";
+                pinjaman = "Sedang";
             }
             else if(p > 100000001)
             {
-                pinjaman = "besar";
+                pinjaman = "Besar";
             }
 
             return pinjaman;
@@ -49,39 +49,59 @@ namespace PolaC4._5_MetroUI
 
         public string waktu(int w)
         {
-            string waktu = "cepat";
+            string waktu = "Cepat";
 
             if(w >= 6 && w <= 12)
             {
-                waktu = "cepat";
+                waktu = "Cepat";
             }
             else if (w >= 13 && w <= 18)
             {
-                waktu = "sedang";
+                waktu = "Sedang";
             }
             else if (w > 19)
             {
-                waktu = "lambat";
+                waktu = "Lambat";
             }
 
             return waktu;
         }
 
+        public string anggunan(int a)
+        {
+            string anggunan = "Tanpa Penjamin";
+
+            if(a == 0)
+            {
+                anggunan = "Tanpa Penjamin";
+            }
+            else if(a  == 1 )
+            {
+                anggunan = "Perorangan";
+            }
+            else if (a == 2)
+            {
+                anggunan = "Perusahaan";
+            }
+
+            return anggunan;
+        }
+
         public string angsuran(int a)
         {
-            string angsuran = "kecil";
+            string angsuran = "Kecil";
 
             if (a <= 100000)
             {
-                angsuran = "kecil";
+                angsuran = "Kecil";
             }
             else if (a >= 100001 && a <= 1000000)
             {
-                angsuran = "sedang";
+                angsuran = "Sedang";
             }
             else if (a > 1000001)
             {
-                angsuran = "besar";
+                angsuran = "Besar";
             }
 
             return angsuran;
@@ -90,19 +110,19 @@ namespace PolaC4._5_MetroUI
 
         public string saldo(int s)
         {
-            string saldo = "kecil";
+            string saldo = "Kecil";
 
             if (s >= 1000000  && s <= 5000000)
             {
-                saldo = "kecil";
+                saldo = "Kecil";
             }
             else if (s >= 5000001 && s <= 10000000)
             {
-                saldo = "sedang";
+                saldo = "Sedang";
             }
             else if (s > 10000001)
             {
-                saldo = "besar";
+                saldo = "Besar";
             }
 
             return saldo;
@@ -110,19 +130,19 @@ namespace PolaC4._5_MetroUI
 
         public string tunggakanPokok(int tp)
         {
-            string tunggakan = "kecil";
+            string tunggakan = "Kecil";
 
             if (tp <= 500000)
             {
-                tunggakan = "kecil";
+                tunggakan = "Kecil";
             }
             else if (tp >= 500001 && tp <= 1000000)
             {
-                tunggakan = "sedang";
+                tunggakan = "Sedang";
             }
             else if (tp > 1000001)
             {
-                tunggakan = "besar";
+                tunggakan = "Besar";
             }
 
             return tunggakan;
@@ -130,19 +150,19 @@ namespace PolaC4._5_MetroUI
 
         public string tunggakanBunga(int tb)
         {
-            string tunggakan = "kecil";
+            string tunggakan = "Kecil";
 
             if (tb <= 100000)
             {
-                tunggakan = "kecil";
+                tunggakan = "Kecil";
             }
             else if (tb >= 100001 && tb <= 1000000)
             {
-                tunggakan = "sedang";
+                tunggakan = "Sedang";
             }
             else if (tb > 1000001)
             {
-                tunggakan = "besar";
+                tunggakan = "Besar";
             }
 
             return tunggakan;

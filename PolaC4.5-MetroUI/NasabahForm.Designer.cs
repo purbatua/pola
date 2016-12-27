@@ -1,6 +1,6 @@
 ﻿namespace PolaC4._5_MetroUI
 {
-    partial class Create
+    partial class NasabahForm
     {
         /// <summary>
         /// Required designer variable.
@@ -50,6 +50,9 @@
             this.cbAnggunan = new MetroFramework.Controls.MetroComboBox();
             this.btnSimpan = new MetroFramework.Controls.MetroButton();
             this.btnBatal = new MetroFramework.Controls.MetroButton();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.cbTarget = new MetroFramework.Controls.MetroComboBox();
+            this.tbID = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -116,7 +119,7 @@
             this.tbUmur.CustomButton.Visible = false;
             this.tbUmur.Lines = new string[0];
             this.tbUmur.Location = new System.Drawing.Point(172, 144);
-            this.tbUmur.MaxLength = 32767;
+            this.tbUmur.MaxLength = 2;
             this.tbUmur.Name = "tbUmur";
             this.tbUmur.PasswordChar = '\0';
             this.tbUmur.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -412,29 +415,87 @@
             // btnSimpan
             // 
             this.btnSimpan.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSimpan.Location = new System.Drawing.Point(172, 392);
+            this.btnSimpan.Location = new System.Drawing.Point(172, 431);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(75, 33);
-            this.btnSimpan.TabIndex = 11;
+            this.btnSimpan.TabIndex = 12;
             this.btnSimpan.Text = "Simpan";
             this.btnSimpan.UseSelectable = true;
             this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
             // btnBatal
             // 
-            this.btnBatal.Location = new System.Drawing.Point(263, 392);
+            this.btnBatal.Location = new System.Drawing.Point(263, 431);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(75, 33);
-            this.btnBatal.TabIndex = 12;
+            this.btnBatal.TabIndex = 13;
             this.btnBatal.Text = "Batal";
             this.btnBatal.UseSelectable = true;
             this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
             // 
-            // Create
+            // metroLabel11
+            // 
+            this.metroLabel11.AutoSize = true;
+            this.metroLabel11.Location = new System.Drawing.Point(25, 387);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(45, 19);
+            this.metroLabel11.TabIndex = 19;
+            this.metroLabel11.Text = "Target";
+            // 
+            // cbTarget
+            // 
+            this.cbTarget.FormattingEnabled = true;
+            this.cbTarget.ItemHeight = 23;
+            this.cbTarget.Items.AddRange(new object[] {
+            "Lancar",
+            "Macet"});
+            this.cbTarget.Location = new System.Drawing.Point(172, 383);
+            this.cbTarget.Name = "cbTarget";
+            this.cbTarget.Size = new System.Drawing.Size(192, 29);
+            this.cbTarget.TabIndex = 11;
+            this.cbTarget.UseSelectable = true;
+            // 
+            // tbID
+            // 
+            // 
+            // 
+            // 
+            this.tbID.CustomButton.Image = null;
+            this.tbID.CustomButton.Location = new System.Drawing.Point(16, 1);
+            this.tbID.CustomButton.Name = "";
+            this.tbID.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tbID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tbID.CustomButton.TabIndex = 1;
+            this.tbID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tbID.CustomButton.UseSelectable = true;
+            this.tbID.CustomButton.Visible = false;
+            this.tbID.Lines = new string[] {
+        "0"};
+            this.tbID.Location = new System.Drawing.Point(172, 50);
+            this.tbID.MaxLength = 32767;
+            this.tbID.Name = "tbID";
+            this.tbID.PasswordChar = '\0';
+            this.tbID.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbID.SelectedText = "";
+            this.tbID.SelectionLength = 0;
+            this.tbID.SelectionStart = 0;
+            this.tbID.ShortcutsEnabled = true;
+            this.tbID.Size = new System.Drawing.Size(268, 23);
+            this.tbID.TabIndex = 20;
+            this.tbID.Text = "0";
+            this.tbID.UseSelectable = true;
+            this.tbID.Visible = false;
+            this.tbID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tbID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // NasabahForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 445);
+            this.ClientSize = new System.Drawing.Size(469, 491);
+            this.Controls.Add(this.tbID);
+            this.Controls.Add(this.cbTarget);
+            this.Controls.Add(this.metroLabel11);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.btnSimpan);
             this.Controls.Add(this.cbAnggunan);
@@ -457,9 +518,10 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.tbNama);
             this.Controls.Add(this.metroLabel1);
-            this.Name = "Create";
+            this.Name = "NasabahForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Tambah Data Baru";
+            this.Text = "Form Data";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NasabahForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,5 +550,8 @@
         private MetroFramework.Controls.MetroComboBox cbAnggunan;
         private MetroFramework.Controls.MetroButton btnSimpan;
         private MetroFramework.Controls.MetroButton btnBatal;
+        private MetroFramework.Controls.MetroLabel metroLabel11;
+        private MetroFramework.Controls.MetroComboBox cbTarget;
+        private MetroFramework.Controls.MetroTextBox tbID;
     }
 }

@@ -167,6 +167,58 @@ namespace PolaC4._5_MetroUI
 
         }
 
+        public string[] find(int id, string table)
+        {
+            string query = "SELECT * FROM " + table + " WHERE id=" + id + "";
+            string[] result = new string[12];
+
+            Console.WriteLine(query);
+
+            try
+            {
+                if (openConnection())
+                {
+                    MySqlCommand command = new MySqlCommand(query, connect);
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    int i = 0;
+                    while (reader.Read())
+                    {
+
+                        result[0] = GetDBString("id", reader);
+                        result[1] = GetDBString("nama", reader);
+                        result[2] = GetDBString("jenis_kelamin", reader);
+                        result[3] = GetDBString("umur", reader);
+                        result[4] = GetDBString("pinjaman", reader);
+                        result[5] = GetDBString("waktu", reader);
+                        result[6] = GetDBString("anggunan", reader);
+                        result[7] = GetDBString("angsuran", reader);
+                        result[8] = GetDBString("saldo", reader);
+                        result[9] = GetDBString("tunggakan_pokok", reader);
+                        result[10] = GetDBString("tunggakan_bunga", reader);
+                        result[11] = GetDBString("target", reader);
+                        i++;
+                    }
+                }
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                closeConnection();
+            }
+
+            return result;
+        }
+
+        private string GetDBString(string SqlFieldName, MySqlDataReader Reader)
+        {
+            return Reader[SqlFieldName].Equals(DBNull.Value) ? String.Empty : Reader.GetString(SqlFieldName);
+        }
+
+
         public string selectField(string selection, string tabel, string where)
         {
             string query = "SELECT " + selection + " FROM " + tabel + " WHERE " + where + ";";

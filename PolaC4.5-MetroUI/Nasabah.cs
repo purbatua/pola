@@ -7,7 +7,7 @@ namespace PolaC4._5_MetroUI
 {
     class Nasabah
     {
-        const string tabel =  "nasabah";
+        const string table =  "nasabah";
 
         int id;
         string nama;
@@ -20,11 +20,13 @@ namespace PolaC4._5_MetroUI
         int saldo;
         int tunggakan_pokok;
         int tunggakan_bunga;
-        //Database db = new Database();
+        string target;
+
+        public Nasabah() { }
 
         public Nasabah(int id, string nama, string jenis_kelamin, int umur,
             int pinjaman, int jangka_waktu, int anggunan, int angsuran,
-            int saldo, int tunggakan_pokok, int tunggakan_bunga) {
+            int saldo, int tunggakan_pokok, int tunggakan_bunga, string target) {
 
             this.id = id == 0 ? 0 : id;
             this.nama = nama;
@@ -37,23 +39,7 @@ namespace PolaC4._5_MetroUI
             this.saldo = saldo;
             this.tunggakan_pokok = tunggakan_pokok;
             this.tunggakan_bunga = tunggakan_bunga;
-
-            /*
-            string value = id + ",'" + nama + "','" + jenis_kelamin + "'," + umur + ", " + 
-                pinjaman + ", " + jangka_waktu + ", " + anggunan + ", " + angsuran + ", " + 
-                saldo + ", " + tunggakan_pokok + ", " + tunggakan_bunga;
-
-            //Console.WriteLine(value);
-            /*
-            if (db.insert(tabel, value))
-            {
-                Console.WriteLine("SUCCESS");
-            }
-            else
-            {
-                Console.WriteLine("FAILED");
-            }
-            */
+            this.target = target;
         }
 
         public bool save()
@@ -63,26 +49,19 @@ namespace PolaC4._5_MetroUI
             Database db = new Database();
             Normalize normal = new Normalize();
 
-            /*
-            string value = "id=" + this.id + ", nama='" + this.nama + "', jenis_kelamin='" + 
-                this.jenis_kelamin + "', umur=" + this.umur + ", pinjaman=" + this.pinjaman + ", jangka_waktu=" +
-                this.jangka_waktu + ", jenis_anggunan=" + this.anggunan + ", angsuran_perbulan=" + this.angsuran + ", saldo=" + 
-                this.saldo + ", tunggakan_pokok=" + this.tunggakan_pokok + ", tunggakan_bunga=" + this.tunggakan_bunga;
-            */
-
             string nasabah = this.id + ",'" + this.nama + "','" + this.jenis_kelamin + "'," + this.umur + ", " +
                 this.pinjaman + ", " + this.jangka_waktu + ", " + this.anggunan + ", " + this.angsuran + ", " +
-                this.saldo + ", " + this.tunggakan_pokok + ", " + this.tunggakan_bunga;
+                this.saldo + ", " + this.tunggakan_pokok + ", " + this.tunggakan_bunga + ",'" + this.target + "'";
 
             string transNasabah = this.id + ",'" + this.jenis_kelamin + "','" + normal.umur(this.umur) + "', '" +
-                normal.pinjaman(this.pinjaman) + "',' " + normal.waktu(this.jangka_waktu) + "', " + this.anggunan + ", '" + normal.angsuran(this.angsuran) + "', '" +
-                normal.saldo(this.saldo) + "', '" + normal.tunggakanPokok(this.tunggakan_pokok) + "', '" + normal.tunggakanBunga(this.tunggakan_bunga) + "'";
+                normal.pinjaman(this.pinjaman) + "',' " + normal.waktu(this.jangka_waktu) + "', " + normal.anggunan(this.anggunan) + ", '" + normal.angsuran(this.angsuran) + "', '" +
+                normal.saldo(this.saldo) + "', '" + normal.tunggakanPokok(this.tunggakan_pokok) + "', '" + normal.tunggakanBunga(this.tunggakan_bunga) + "','" + this.target + "'";
 
 
 
-            if (db.insert("data", transNasabah))
+            if (db.insert("nasabah_trans", transNasabah))
             {
-                if (db.insert(tabel, nasabah))
+                if (db.insert(table, nasabah))
                 {
                     result = true;
                 }
@@ -96,32 +75,47 @@ namespace PolaC4._5_MetroUI
                 result = false;
             }
 
-            
-
-
-    
             return result;
         }
 
-        public bool create(Array[] args)
+
+        public bool update()
         {
-            
-            //this.id = id;
-            //this.nama = args[0];
-            //this.jenis_kelamin = args[1];
-            //this.umur = args[2];
-            //this.pinjaman = args[3];
-            //this.jangka_waktu = jangka_waktu;
-            //this.anggunan = anggunan;
-            //this.angsuran = angsuran;
-            //this.saldo = saldo;
-            //this.tunggakan_pokok = tunggakan_pokok;
-            //this.tunggakan_bunga = tunggakan_bunga;
+            bool result = false;
+            Database db = new Database();
+            Normalize normal = new Normalize();
 
-            return true;
+
+            string DataNasabah =  "nama='" + this.nama + "',jenis_kelamin='" + this.jenis_kelamin + "',umur=" + this.umur + ", pinjaman=" +
+                this.pinjaman + ", waktu=" + this.jangka_waktu + ", anggunan=" + this.anggunan + ", angsuran=" + this.angsuran + ", saldo=" +
+                this.saldo + ", tunggakan_pokok=" + this.tunggakan_pokok + ", tunggakan_bunga=" + this.tunggakan_bunga + ", target='" + this.target + "'";
+
+            string DataNasabahTrans = "jenis_kelamin='" + this.jenis_kelamin + "',umur='" + normal.umur(this.umur) + "', pinjaman='" +
+                normal.pinjaman(this.pinjaman) + "', waktu=' " + normal.waktu(this.jangka_waktu) + "', anggunan='" + normal.anggunan(this.anggunan) + "', angsuran='" + 
+                normal.angsuran(this.angsuran) + "', saldo='" + normal.saldo(this.saldo) + "', tunggakan_pokok='" + normal.tunggakanPokok(this.tunggakan_pokok) + "', tunggakan_bunga='" + 
+                normal.tunggakanBunga(this.tunggakan_bunga) + "', target='" + this.target + "'";
+
+
+            if (db.update("nasabah_trans", DataNasabahTrans, "nasabah_id=" + this.id))
+            {
+                if (db.update("nasabah", DataNasabah, "id=" + this.id))
+                {
+                    result = true;
+                }
+                else
+                {
+                    result = false;
+                }
+            }
+            else
+            {
+                result = false;
+            }
+
+
+
+            return result;
         }
-
-
 
         
 

@@ -10,9 +10,9 @@ F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-Me
 F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-MetroUI\bin\Debug\MetroFramework.Design.dll
 F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-MetroUI\obj\Debug\PolaC4._5_MetroUI.Main.resources
 F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-MetroUI\bin\Debug\MySql.Data.dll
-F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-MetroUI\obj\Debug\PolaC4._5_MetroUI.Create.resources
 F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-MetroUI\bin\Debug\PolaC4.5-MetroUI.exe.config
 F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-MetroUI\bin\Debug\EntityFramework.dll
 F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-MetroUI\bin\Debug\EntityFramework.SqlServer.dll
 F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-MetroUI\bin\Debug\EntityFramework.xml
 F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-MetroUI\bin\Debug\EntityFramework.SqlServer.xml
+F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-MetroUI\obj\Debug\PolaC4._5_MetroUI.NasabahForm.resources

@@ -9,12 +9,16 @@ namespace PolaC4._5_MetroUI
     {
         public double Entropy()
         {
+            double hasil = 0.0;
 
+            return hasil;
         }
 
         public double Gain()
         {
+            double hasil = 0.0;
 
+            return hasil;
         }
     }
 }
