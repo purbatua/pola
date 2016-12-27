@@ -39,12 +39,6 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.tbAngsuran = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.tbSaldo = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.tbTunggakanPokok = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.tbTunggakanBunga = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.cbJenisKelamin = new MetroFramework.Controls.MetroComboBox();
             this.tbWaktu = new MetroFramework.Controls.MetroTextBox();
             this.cbAnggunan = new MetroFramework.Controls.MetroComboBox();
@@ -70,7 +64,7 @@
             // 
             // 
             this.tbNama.CustomButton.Image = null;
-            this.tbNama.CustomButton.Location = new System.Drawing.Point(246, 1);
+            this.tbNama.CustomButton.Location = new System.Drawing.Point(170, 1);
             this.tbNama.CustomButton.Name = "";
             this.tbNama.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.tbNama.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -88,7 +82,7 @@
             this.tbNama.SelectionLength = 0;
             this.tbNama.SelectionStart = 0;
             this.tbNama.ShortcutsEnabled = true;
-            this.tbNama.Size = new System.Drawing.Size(268, 23);
+            this.tbNama.Size = new System.Drawing.Size(192, 23);
             this.tbNama.TabIndex = 1;
             this.tbNama.UseSelectable = true;
             this.tbNama.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -109,7 +103,7 @@
             // 
             // 
             this.tbUmur.CustomButton.Image = null;
-            this.tbUmur.CustomButton.Location = new System.Drawing.Point(246, 1);
+            this.tbUmur.CustomButton.Location = new System.Drawing.Point(170, 1);
             this.tbUmur.CustomButton.Name = "";
             this.tbUmur.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.tbUmur.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -127,7 +121,7 @@
             this.tbUmur.SelectionLength = 0;
             this.tbUmur.SelectionStart = 0;
             this.tbUmur.ShortcutsEnabled = true;
-            this.tbUmur.Size = new System.Drawing.Size(268, 23);
+            this.tbUmur.Size = new System.Drawing.Size(192, 23);
             this.tbUmur.TabIndex = 3;
             this.tbUmur.UseSelectable = true;
             this.tbUmur.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -148,7 +142,7 @@
             // 
             // 
             this.tbPinjaman.CustomButton.Image = null;
-            this.tbPinjaman.CustomButton.Location = new System.Drawing.Point(246, 1);
+            this.tbPinjaman.CustomButton.Location = new System.Drawing.Point(170, 1);
             this.tbPinjaman.CustomButton.Name = "";
             this.tbPinjaman.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.tbPinjaman.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -166,11 +160,12 @@
             this.tbPinjaman.SelectionLength = 0;
             this.tbPinjaman.SelectionStart = 0;
             this.tbPinjaman.ShortcutsEnabled = true;
-            this.tbPinjaman.Size = new System.Drawing.Size(268, 23);
+            this.tbPinjaman.Size = new System.Drawing.Size(192, 23);
             this.tbPinjaman.TabIndex = 4;
             this.tbPinjaman.UseSelectable = true;
             this.tbPinjaman.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbPinjaman.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbPinjaman.TextChanged += new System.EventHandler(this.tbPinjaman_TextChanged);
             // 
             // metroLabel4
             // 
@@ -205,7 +200,7 @@
             // 
             // 
             this.tbAngsuran.CustomButton.Image = null;
-            this.tbAngsuran.CustomButton.Location = new System.Drawing.Point(246, 1);
+            this.tbAngsuran.CustomButton.Location = new System.Drawing.Point(170, 1);
             this.tbAngsuran.CustomButton.Name = "";
             this.tbAngsuran.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.tbAngsuran.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -213,6 +208,7 @@
             this.tbAngsuran.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbAngsuran.CustomButton.UseSelectable = true;
             this.tbAngsuran.CustomButton.Visible = false;
+            this.tbAngsuran.Enabled = false;
             this.tbAngsuran.Lines = new string[0];
             this.tbAngsuran.Location = new System.Drawing.Point(172, 267);
             this.tbAngsuran.MaxLength = 32767;
@@ -223,7 +219,7 @@
             this.tbAngsuran.SelectionLength = 0;
             this.tbAngsuran.SelectionStart = 0;
             this.tbAngsuran.ShortcutsEnabled = true;
-            this.tbAngsuran.Size = new System.Drawing.Size(268, 23);
+            this.tbAngsuran.Size = new System.Drawing.Size(192, 23);
             this.tbAngsuran.TabIndex = 7;
             this.tbAngsuran.UseSelectable = true;
             this.tbAngsuran.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -237,123 +233,6 @@
             this.metroLabel7.Size = new System.Drawing.Size(119, 19);
             this.metroLabel7.TabIndex = 12;
             this.metroLabel7.Text = "Angsuran Perbulan";
-            // 
-            // tbSaldo
-            // 
-            // 
-            // 
-            // 
-            this.tbSaldo.CustomButton.Image = null;
-            this.tbSaldo.CustomButton.Location = new System.Drawing.Point(246, 1);
-            this.tbSaldo.CustomButton.Name = "";
-            this.tbSaldo.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tbSaldo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tbSaldo.CustomButton.TabIndex = 1;
-            this.tbSaldo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tbSaldo.CustomButton.UseSelectable = true;
-            this.tbSaldo.CustomButton.Visible = false;
-            this.tbSaldo.Lines = new string[0];
-            this.tbSaldo.Location = new System.Drawing.Point(172, 296);
-            this.tbSaldo.MaxLength = 32767;
-            this.tbSaldo.Name = "tbSaldo";
-            this.tbSaldo.PasswordChar = '\0';
-            this.tbSaldo.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbSaldo.SelectedText = "";
-            this.tbSaldo.SelectionLength = 0;
-            this.tbSaldo.SelectionStart = 0;
-            this.tbSaldo.ShortcutsEnabled = true;
-            this.tbSaldo.Size = new System.Drawing.Size(268, 23);
-            this.tbSaldo.TabIndex = 8;
-            this.tbSaldo.UseSelectable = true;
-            this.tbSaldo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tbSaldo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel8
-            // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(23, 298);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(42, 19);
-            this.metroLabel8.TabIndex = 14;
-            this.metroLabel8.Text = "Saldo";
-            // 
-            // tbTunggakanPokok
-            // 
-            // 
-            // 
-            // 
-            this.tbTunggakanPokok.CustomButton.Image = null;
-            this.tbTunggakanPokok.CustomButton.Location = new System.Drawing.Point(246, 1);
-            this.tbTunggakanPokok.CustomButton.Name = "";
-            this.tbTunggakanPokok.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tbTunggakanPokok.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tbTunggakanPokok.CustomButton.TabIndex = 1;
-            this.tbTunggakanPokok.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tbTunggakanPokok.CustomButton.UseSelectable = true;
-            this.tbTunggakanPokok.CustomButton.Visible = false;
-            this.tbTunggakanPokok.Lines = new string[0];
-            this.tbTunggakanPokok.Location = new System.Drawing.Point(172, 325);
-            this.tbTunggakanPokok.MaxLength = 32767;
-            this.tbTunggakanPokok.Name = "tbTunggakanPokok";
-            this.tbTunggakanPokok.PasswordChar = '\0';
-            this.tbTunggakanPokok.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbTunggakanPokok.SelectedText = "";
-            this.tbTunggakanPokok.SelectionLength = 0;
-            this.tbTunggakanPokok.SelectionStart = 0;
-            this.tbTunggakanPokok.ShortcutsEnabled = true;
-            this.tbTunggakanPokok.Size = new System.Drawing.Size(268, 23);
-            this.tbTunggakanPokok.TabIndex = 9;
-            this.tbTunggakanPokok.UseSelectable = true;
-            this.tbTunggakanPokok.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tbTunggakanPokok.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(23, 327);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(110, 19);
-            this.metroLabel9.TabIndex = 16;
-            this.metroLabel9.Text = "Tunggakan Pokok";
-            // 
-            // tbTunggakanBunga
-            // 
-            // 
-            // 
-            // 
-            this.tbTunggakanBunga.CustomButton.Image = null;
-            this.tbTunggakanBunga.CustomButton.Location = new System.Drawing.Point(246, 1);
-            this.tbTunggakanBunga.CustomButton.Name = "";
-            this.tbTunggakanBunga.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tbTunggakanBunga.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tbTunggakanBunga.CustomButton.TabIndex = 1;
-            this.tbTunggakanBunga.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tbTunggakanBunga.CustomButton.UseSelectable = true;
-            this.tbTunggakanBunga.CustomButton.Visible = false;
-            this.tbTunggakanBunga.Lines = new string[0];
-            this.tbTunggakanBunga.Location = new System.Drawing.Point(172, 354);
-            this.tbTunggakanBunga.MaxLength = 32767;
-            this.tbTunggakanBunga.Name = "tbTunggakanBunga";
-            this.tbTunggakanBunga.PasswordChar = '\0';
-            this.tbTunggakanBunga.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbTunggakanBunga.SelectedText = "";
-            this.tbTunggakanBunga.SelectionLength = 0;
-            this.tbTunggakanBunga.SelectionStart = 0;
-            this.tbTunggakanBunga.ShortcutsEnabled = true;
-            this.tbTunggakanBunga.Size = new System.Drawing.Size(268, 23);
-            this.tbTunggakanBunga.TabIndex = 10;
-            this.tbTunggakanBunga.UseSelectable = true;
-            this.tbTunggakanBunga.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tbTunggakanBunga.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(23, 356);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(112, 19);
-            this.metroLabel10.TabIndex = 18;
-            this.metroLabel10.Text = "Tunggakan Bunga";
             // 
             // cbJenisKelamin
             // 
@@ -374,7 +253,7 @@
             // 
             // 
             this.tbWaktu.CustomButton.Image = null;
-            this.tbWaktu.CustomButton.Location = new System.Drawing.Point(246, 1);
+            this.tbWaktu.CustomButton.Location = new System.Drawing.Point(170, 1);
             this.tbWaktu.CustomButton.Name = "";
             this.tbWaktu.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.tbWaktu.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -392,11 +271,12 @@
             this.tbWaktu.SelectionLength = 0;
             this.tbWaktu.SelectionStart = 0;
             this.tbWaktu.ShortcutsEnabled = true;
-            this.tbWaktu.Size = new System.Drawing.Size(268, 23);
+            this.tbWaktu.Size = new System.Drawing.Size(192, 23);
             this.tbWaktu.TabIndex = 5;
             this.tbWaktu.UseSelectable = true;
             this.tbWaktu.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbWaktu.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbWaktu.TextChanged += new System.EventHandler(this.tbPinjaman_TextChanged);
             // 
             // cbAnggunan
             // 
@@ -415,7 +295,7 @@
             // btnSimpan
             // 
             this.btnSimpan.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSimpan.Location = new System.Drawing.Point(172, 431);
+            this.btnSimpan.Location = new System.Drawing.Point(172, 345);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(75, 33);
             this.btnSimpan.TabIndex = 12;
@@ -425,7 +305,7 @@
             // 
             // btnBatal
             // 
-            this.btnBatal.Location = new System.Drawing.Point(263, 431);
+            this.btnBatal.Location = new System.Drawing.Point(263, 345);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(75, 33);
             this.btnBatal.TabIndex = 13;
@@ -436,7 +316,7 @@
             // metroLabel11
             // 
             this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(25, 387);
+            this.metroLabel11.Location = new System.Drawing.Point(25, 300);
             this.metroLabel11.Name = "metroLabel11";
             this.metroLabel11.Size = new System.Drawing.Size(45, 19);
             this.metroLabel11.TabIndex = 19;
@@ -449,7 +329,7 @@
             this.cbTarget.Items.AddRange(new object[] {
             "Lancar",
             "Macet"});
-            this.cbTarget.Location = new System.Drawing.Point(172, 383);
+            this.cbTarget.Location = new System.Drawing.Point(172, 296);
             this.cbTarget.Name = "cbTarget";
             this.cbTarget.Size = new System.Drawing.Size(192, 29);
             this.cbTarget.TabIndex = 11;
@@ -461,7 +341,7 @@
             // 
             // 
             this.tbID.CustomButton.Image = null;
-            this.tbID.CustomButton.Location = new System.Drawing.Point(16, 1);
+            this.tbID.CustomButton.Location = new System.Drawing.Point(170, 1);
             this.tbID.CustomButton.Name = "";
             this.tbID.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.tbID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -480,7 +360,7 @@
             this.tbID.SelectionLength = 0;
             this.tbID.SelectionStart = 0;
             this.tbID.ShortcutsEnabled = true;
-            this.tbID.Size = new System.Drawing.Size(268, 23);
+            this.tbID.Size = new System.Drawing.Size(192, 23);
             this.tbID.TabIndex = 20;
             this.tbID.Text = "0";
             this.tbID.UseSelectable = true;
@@ -492,7 +372,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 491);
+            this.ClientSize = new System.Drawing.Size(399, 404);
             this.Controls.Add(this.tbID);
             this.Controls.Add(this.cbTarget);
             this.Controls.Add(this.metroLabel11);
@@ -500,12 +380,6 @@
             this.Controls.Add(this.btnSimpan);
             this.Controls.Add(this.cbAnggunan);
             this.Controls.Add(this.cbJenisKelamin);
-            this.Controls.Add(this.tbTunggakanBunga);
-            this.Controls.Add(this.metroLabel10);
-            this.Controls.Add(this.tbTunggakanPokok);
-            this.Controls.Add(this.metroLabel9);
-            this.Controls.Add(this.tbSaldo);
-            this.Controls.Add(this.metroLabel8);
             this.Controls.Add(this.tbAngsuran);
             this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.metroLabel6);
@@ -537,14 +411,8 @@
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroTextBox tbAngsuran;
         private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Controls.MetroTextBox tbSaldo;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroTextBox tbNama;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroTextBox tbTunggakanPokok;
-        private MetroFramework.Controls.MetroLabel metroLabel9;
-        private MetroFramework.Controls.MetroTextBox tbTunggakanBunga;
-        private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroComboBox cbJenisKelamin;
         private MetroFramework.Controls.MetroTextBox tbWaktu;
         private MetroFramework.Controls.MetroComboBox cbAnggunan;

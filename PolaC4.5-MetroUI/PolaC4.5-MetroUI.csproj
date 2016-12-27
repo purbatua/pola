@@ -89,6 +89,7 @@
     <Compile Include="Normalize.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransformasiNasabah.cs" />
     <EmbeddedResource Include="NasabahForm.resx">
       <DependentUpon>NasabahForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -34,15 +34,13 @@ namespace PolaC4._5_MetroUI
                 tbNama.Text.ToString(),
                 cbJenisKelamin.Text.ToString(),
                 int.Parse(tbUmur.Text),
-                int.Parse(tbPinjaman.Text),
+                Convert.ToInt64(tbPinjaman.Text.ToString()),
                 int.Parse(tbWaktu.Text),
-                int.Parse(cbAnggunan.SelectedIndex.ToString()),
-                int.Parse(tbAngsuran.Text),
-                int.Parse(tbSaldo.Text),
-                int.Parse(tbTunggakanPokok.Text),
-                int.Parse(tbTunggakanBunga.Text),
+                cbAnggunan.Text.ToString(),
+                Convert.ToInt32(tbAngsuran.Text),
                 cbTarget.Text.ToString()
             );
+
 
             if (!edit)
             {
@@ -50,7 +48,6 @@ namespace PolaC4._5_MetroUI
                 {
                     MetroFramework.MetroMessageBox.Show(this, "Data berhasil disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Question);
                     this.Close(); ;
-
                 }
                 else {
                     MetroFramework.MetroMessageBox.Show(this, "Data gagal disimpan", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -85,17 +82,25 @@ namespace PolaC4._5_MetroUI
             tbUmur.Text = args[3];
             tbPinjaman.Text = args[4];
             tbWaktu.Text = args[5];
-            cbAnggunan.SelectedIndex = int.Parse(args[6]);
+            cbAnggunan.SelectedText = args[6];
             tbAngsuran.Text = args[7];
-            tbSaldo.Text = args[8];
-            tbTunggakanPokok.Text = args[9];
-            tbTunggakanBunga.Text = args[10];
-            cbTarget.SelectedIndex = args[11] == "Lancar" ? 0 : 1;
+            cbTarget.SelectedIndex = args[8] == "Lancar" ? 0 : 1;
         }
 
         private void NasabahForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             main.RefreshDataGrid();
+        }
+
+        private void tbPinjaman_TextChanged(object sender, EventArgs e)
+        {
+            if(tbPinjaman.Text != "" || tbPinjaman.Text == "0")
+            {
+                if(tbWaktu.Text != "" || tbWaktu.Text == "0")
+                {
+                    tbAngsuran.Text = ((int) Convert.ToInt64(tbPinjaman.Text) / Convert.ToInt64(tbWaktu.Text)).ToString();
+                }
+            }
         }
     }
 }

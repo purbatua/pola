@@ -90,7 +90,27 @@ namespace PolaC4._5_MetroUI
 
         private void linkDelete_Click(object sender, EventArgs e)
         {
+            int index = DataGridNasabah.SelectedCells[0].RowIndex;
+            int id = int.Parse(DataGridNasabah.Rows[index].Cells[0].Value.ToString());
 
+            DialogResult dr = MetroFramework.MetroMessageBox.Show(this, "Apakah anda ingin menghapus item ini ?", "Konfirmasi", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+
+
+            if(dr == DialogResult.OK)
+            {
+                Nasabah nasabah = new Nasabah();
+                TransformasiNasabah trnasabah = new TransformasiNasabah();
+
+                nasabah.remove(id);
+                trnasabah.remove(id);
+            }
+            else
+            {
+
+            }
+
+
+            
         }
 
         public void RefreshDataGrid()
@@ -114,18 +134,73 @@ namespace PolaC4._5_MetroUI
 
             switch (index)
             {
-                case 0:
+                case 0: // Nasabah
                         linkAdd.Visible = true;
                         linkEdit.Visible = true;
                         linkDelete.Visible = true;
                     break;
-                case 1:
+                case 1: // Data Transformasi
                     //MetroFramework.MetroMessageBox.Show(this, "TEST");
                     db.LoadToDataGrid("nasabah_trans", DataGridNasabahTransformasi);
                     break;
-                case 2:
+                case 2: // Training
+                    lvTraining.BeginUpdate();
+                    lvTraining.Items.Clear();
+                    lvTraining.View = View.Details;
+
+                    lvTraining.Columns.Add("#");
+                    lvTraining.Columns.Add("Jenis Kelamin");
+                    lvTraining.Columns.Add("Umur");
+                    lvTraining.Columns.Add("Pinjaman");
+                    lvTraining.Columns.Add("Waktu");
+                    lvTraining.Columns.Add("Anggunan");
+                    lvTraining.Columns.Add("Angsuran");
+                    lvTraining.Columns.Add("Target");
+                    //lvTraining.CheckBoxes = true;
+
+                    TransformasiNasabah trnasabah = new TransformasiNasabah();
+
+                    //for(int i=0; i < trnasabah.attributes.Length; i++)
+                    //{
+                    //    Console.WriteLine(trnasabah.attributes[i]);
+                    //}
+
+                    string[][] listItems = trnasabah.all();
+
+                    //Console.WriteLine(listItems);
+
+                    for (int i = 0; i < listItems.Length; i++)
+                    {
+                        string[] data = new string[trnasabah.attributes.Length];
+
+                        for (int j = 0; j < listItems[0].Length; j++)
+                        {
+                            data[j] = listItems[i][j];
+                        }
+
+                        ListViewItem lvi;
+                        lvi = new ListViewItem(data);
+
+                        lvTraining.Items.Add(lvi);
+                        lvTraining.Items[0].Checked = true;
+
+
+
+                        //for (int j = 0; j < trnasabah.attributes.Length; j++)
+                        //{
+                        //    Console.Write(listItems[i][j]);
+                        //}
+
+                        //Console.WriteLine("");
+                    }
+
+                    lvTraining.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                    lvTraining.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+                    lvTraining.EndUpdate();
                     break;
-                case 3:
+                case 3: // Testing
+                    break;
+                case 4: // Pengaturan
                     break;
                 default:
                     break;
@@ -159,5 +234,7 @@ namespace PolaC4._5_MetroUI
                 btnSimpanTesting.Enabled = true;
             }
         }
+
+        
     }
 }

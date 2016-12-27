@@ -27,7 +27,7 @@ namespace PolaC4._5_MetroUI
             return umur;
         }
 
-        public string pinjaman(int p)
+        public string pinjaman(long p)
         {
             string pinjaman = "Kecil";
 
@@ -67,27 +67,27 @@ namespace PolaC4._5_MetroUI
             return waktu;
         }
 
-        public string anggunan(int a)
-        {
-            string anggunan = "Tanpa Penjamin";
+        //public string anggunan(int a)
+        //{
+        //    string anggunan = "Tanpa Penjamin";
 
-            if(a == 0)
-            {
-                anggunan = "Tanpa Penjamin";
-            }
-            else if(a  == 1 )
-            {
-                anggunan = "Perorangan";
-            }
-            else if (a == 2)
-            {
-                anggunan = "Perusahaan";
-            }
+        //    if(a == 0)
+        //    {
+        //        anggunan = "Tanpa Penjamin";
+        //    }
+        //    else if(a  == 1 )
+        //    {
+        //        anggunan = "Perorangan";
+        //    }
+        //    else if (a == 2)
+        //    {
+        //        anggunan = "Perusahaan";
+        //    }
 
-            return anggunan;
-        }
+        //    return anggunan;
+        //}
 
-        public string angsuran(int a)
+        public string angsuran(long a)
         {
             string angsuran = "Kecil";
 
@@ -108,65 +108,65 @@ namespace PolaC4._5_MetroUI
         }
 
 
-        public string saldo(int s)
-        {
-            string saldo = "Kecil";
+        //public string saldo(int s)
+        //{
+        //    string saldo = "Kecil";
 
-            if (s >= 1000000  && s <= 5000000)
-            {
-                saldo = "Kecil";
-            }
-            else if (s >= 5000001 && s <= 10000000)
-            {
-                saldo = "Sedang";
-            }
-            else if (s > 10000001)
-            {
-                saldo = "Besar";
-            }
+        //    if (s >= 1000000  && s <= 5000000)
+        //    {
+        //        saldo = "Kecil";
+        //    }
+        //    else if (s >= 5000001 && s <= 10000000)
+        //    {
+        //        saldo = "Sedang";
+        //    }
+        //    else if (s > 10000001)
+        //    {
+        //        saldo = "Besar";
+        //    }
 
-            return saldo;
-        }
+        //    return saldo;
+        //}
 
-        public string tunggakanPokok(int tp)
-        {
-            string tunggakan = "Kecil";
+        //public string tunggakanPokok(int tp)
+        //{
+        //    string tunggakan = "Kecil";
 
-            if (tp <= 500000)
-            {
-                tunggakan = "Kecil";
-            }
-            else if (tp >= 500001 && tp <= 1000000)
-            {
-                tunggakan = "Sedang";
-            }
-            else if (tp > 1000001)
-            {
-                tunggakan = "Besar";
-            }
+        //    if (tp <= 500000)
+        //    {
+        //        tunggakan = "Kecil";
+        //    }
+        //    else if (tp >= 500001 && tp <= 1000000)
+        //    {
+        //        tunggakan = "Sedang";
+        //    }
+        //    else if (tp > 1000001)
+        //    {
+        //        tunggakan = "Besar";
+        //    }
 
-            return tunggakan;
-        }
+        //    return tunggakan;
+        //}
 
-        public string tunggakanBunga(int tb)
-        {
-            string tunggakan = "Kecil";
+        //public string tunggakanBunga(int tb)
+        //{
+        //    string tunggakan = "Kecil";
 
-            if (tb <= 100000)
-            {
-                tunggakan = "Kecil";
-            }
-            else if (tb >= 100001 && tb <= 1000000)
-            {
-                tunggakan = "Sedang";
-            }
-            else if (tb > 1000001)
-            {
-                tunggakan = "Besar";
-            }
+        //    if (tb <= 100000)
+        //    {
+        //        tunggakan = "Kecil";
+        //    }
+        //    else if (tb >= 100001 && tb <= 1000000)
+        //    {
+        //        tunggakan = "Sedang";
+        //    }
+        //    else if (tb > 1000001)
+        //    {
+        //        tunggakan = "Besar";
+        //    }
 
-            return tunggakan;
-        }
+        //    return tunggakan;
+        //}
 
 
     }

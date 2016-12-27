@@ -170,7 +170,7 @@ namespace PolaC4._5_MetroUI
         public string[] find(int id, string table)
         {
             string query = "SELECT * FROM " + table + " WHERE id=" + id + "";
-            string[] result = new string[12];
+            string[] result = new string[9];
 
             Console.WriteLine(query);
 
@@ -193,10 +193,7 @@ namespace PolaC4._5_MetroUI
                         result[5] = GetDBString("waktu", reader);
                         result[6] = GetDBString("anggunan", reader);
                         result[7] = GetDBString("angsuran", reader);
-                        result[8] = GetDBString("saldo", reader);
-                        result[9] = GetDBString("tunggakan_pokok", reader);
-                        result[10] = GetDBString("tunggakan_bunga", reader);
-                        result[11] = GetDBString("target", reader);
+                        result[8] = GetDBString("target", reader);
                         i++;
                     }
                 }
@@ -217,6 +214,52 @@ namespace PolaC4._5_MetroUI
         {
             return Reader[SqlFieldName].Equals(DBNull.Value) ? String.Empty : Reader.GetString(SqlFieldName);
         }
+
+        public string[][] get(string table, string[] column)
+        {
+            string query = "SELECT * FROM " + table;
+            string[][] result = new string[count(table)][];
+
+
+            try
+            {
+                if (openConnection())
+                {
+                    MySqlCommand command = new MySqlCommand(query, connect);
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    int i = 0;
+                    while (reader.Read())
+                    {
+                        string[] data = new string[column.Length];
+
+                        for (int n = 0; n < column.Length; n++)
+                        {
+                            //MySqlDataAdapter r = reader;
+                            data[n] = GetDBString(column[n], reader);
+                        }
+
+                        result[i] = data;
+                        //Console.WriteLine(result[i][0] + result[i][1] + result[i][2]);
+                        i++;
+                    }
+                }
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                closeConnection();
+            }
+
+            return result;
+        }
+
+
+
+
 
 
         public string selectField(string selection, string tabel, string where)

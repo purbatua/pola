@@ -45,38 +45,41 @@
             this.DataGridNasabahTransformasi = new MetroFramework.Controls.MetroGrid();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.tabKlasifikasi = new MetroFramework.Controls.MetroTabPage();
+            this.tabTraining = new MetroFramework.Controls.MetroTabPage();
+            this.labelSelectTraining = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.lvTraining = new MetroFramework.Controls.MetroListView();
+            this.tabTesting = new MetroFramework.Controls.MetroTabPage();
             this.tabPengaturan = new MetroFramework.Controls.MetroTabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSimpanTesting = new MetroFramework.Controls.MetroButton();
+            this.btnSimpanTraining = new MetroFramework.Controls.MetroButton();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.tbDataTesting = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.tbDataTraining = new MetroFramework.Controls.MetroTextBox();
+            this.checkTestingAcak = new MetroFramework.Controls.MetroCheckBox();
+            this.checkTrainingAcak = new MetroFramework.Controls.MetroCheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.linkAdd = new MetroFramework.Controls.MetroLink();
             this.linkEdit = new MetroFramework.Controls.MetroLink();
             this.linkDelete = new MetroFramework.Controls.MetroLink();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkTrainingAcak = new MetroFramework.Controls.MetroCheckBox();
-            this.checkTestingAcak = new MetroFramework.Controls.MetroCheckBox();
-            this.tbDataTraining = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.tbDataTesting = new MetroFramework.Controls.MetroTextBox();
-            this.btnSimpanTraining = new MetroFramework.Controls.MetroButton();
-            this.btnSimpanTesting = new MetroFramework.Controls.MetroButton();
             this.MainTab.SuspendLayout();
             this.tabNasabah.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridNasabah)).BeginInit();
             this.tabTransformasi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridNasabahTransformasi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
-            this.tabKlasifikasi.SuspendLayout();
+            this.tabTraining.SuspendLayout();
             this.tabPengaturan.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTab
@@ -86,11 +89,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MainTab.Controls.Add(this.tabNasabah);
             this.MainTab.Controls.Add(this.tabTransformasi);
-            this.MainTab.Controls.Add(this.tabKlasifikasi);
+            this.MainTab.Controls.Add(this.tabTraining);
+            this.MainTab.Controls.Add(this.tabTesting);
             this.MainTab.Controls.Add(this.tabPengaturan);
             this.MainTab.Location = new System.Drawing.Point(23, 105);
             this.MainTab.Name = "MainTab";
-            this.MainTab.SelectedIndex = 3;
+            this.MainTab.SelectedIndex = 2;
             this.MainTab.Size = new System.Drawing.Size(704, 397);
             this.MainTab.TabIndex = 0;
             this.MainTab.UseSelectable = true;
@@ -130,7 +134,7 @@
             this.DataGridNasabah.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataGridNasabah.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.DataGridNasabah.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DataGridNasabah.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.DataGridNasabah.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridNasabah.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -299,20 +303,72 @@
             this.metroGrid1.Size = new System.Drawing.Size(690, 322);
             this.metroGrid1.TabIndex = 2;
             // 
-            // tabKlasifikasi
+            // tabTraining
             // 
-            this.tabKlasifikasi.Controls.Add(this.metroButton1);
-            this.tabKlasifikasi.HorizontalScrollbarBarColor = true;
-            this.tabKlasifikasi.HorizontalScrollbarHighlightOnWheel = false;
-            this.tabKlasifikasi.HorizontalScrollbarSize = 10;
-            this.tabKlasifikasi.Location = new System.Drawing.Point(4, 38);
-            this.tabKlasifikasi.Name = "tabKlasifikasi";
-            this.tabKlasifikasi.Size = new System.Drawing.Size(696, 355);
-            this.tabKlasifikasi.TabIndex = 1;
-            this.tabKlasifikasi.Text = "Klasifikasi C4.5";
-            this.tabKlasifikasi.VerticalScrollbarBarColor = true;
-            this.tabKlasifikasi.VerticalScrollbarHighlightOnWheel = false;
-            this.tabKlasifikasi.VerticalScrollbarSize = 10;
+            this.tabTraining.Controls.Add(this.labelSelectTraining);
+            this.tabTraining.Controls.Add(this.metroLabel9);
+            this.tabTraining.Controls.Add(this.lvTraining);
+            this.tabTraining.HorizontalScrollbarBarColor = true;
+            this.tabTraining.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabTraining.HorizontalScrollbarSize = 10;
+            this.tabTraining.Location = new System.Drawing.Point(4, 38);
+            this.tabTraining.Name = "tabTraining";
+            this.tabTraining.Size = new System.Drawing.Size(696, 355);
+            this.tabTraining.TabIndex = 1;
+            this.tabTraining.Text = "Training";
+            this.tabTraining.VerticalScrollbarBarColor = true;
+            this.tabTraining.VerticalScrollbarHighlightOnWheel = false;
+            this.tabTraining.VerticalScrollbarSize = 10;
+            // 
+            // labelSelectTraining
+            // 
+            this.labelSelectTraining.AutoSize = true;
+            this.labelSelectTraining.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.labelSelectTraining.Location = new System.Drawing.Point(151, 312);
+            this.labelSelectTraining.Name = "labelSelectTraining";
+            this.labelSelectTraining.Size = new System.Drawing.Size(21, 25);
+            this.labelSelectTraining.TabIndex = 5;
+            this.labelSelectTraining.Text = "0";
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel9.Location = new System.Drawing.Point(3, 312);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(153, 25);
+            this.metroLabel9.TabIndex = 4;
+            this.metroLabel9.Text = "Total Data Terpilih: ";
+            // 
+            // lvTraining
+            // 
+            this.lvTraining.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.lvTraining.AllowSorting = true;
+            this.lvTraining.CheckBoxes = true;
+            this.lvTraining.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lvTraining.FullRowSelect = true;
+            this.lvTraining.GridLines = true;
+            this.lvTraining.Location = new System.Drawing.Point(0, 22);
+            this.lvTraining.Name = "lvTraining";
+            this.lvTraining.OwnerDraw = true;
+            this.lvTraining.Size = new System.Drawing.Size(696, 267);
+            this.lvTraining.TabIndex = 3;
+            this.lvTraining.UseCompatibleStateImageBehavior = false;
+            this.lvTraining.UseSelectable = true;
+            // 
+            // tabTesting
+            // 
+            this.tabTesting.HorizontalScrollbarBarColor = true;
+            this.tabTesting.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabTesting.HorizontalScrollbarSize = 10;
+            this.tabTesting.Location = new System.Drawing.Point(4, 38);
+            this.tabTesting.Name = "tabTesting";
+            this.tabTesting.Size = new System.Drawing.Size(696, 355);
+            this.tabTesting.TabIndex = 4;
+            this.tabTesting.Text = "Testing";
+            this.tabTesting.VerticalScrollbarBarColor = true;
+            this.tabTesting.VerticalScrollbarHighlightOnWheel = false;
+            this.tabTesting.VerticalScrollbarSize = 10;
             // 
             // tabPengaturan
             // 
@@ -330,47 +386,155 @@
             this.tabPengaturan.VerticalScrollbarHighlightOnWheel = false;
             this.tabPengaturan.VerticalScrollbarSize = 10;
             // 
-            // linkAdd
+            // groupBox2
             // 
-            this.linkAdd.Image = global::PolaC4._5_MetroUI.Properties.Resources.plus;
-            this.linkAdd.ImageSize = 24;
-            this.linkAdd.Location = new System.Drawing.Point(694, 102);
-            this.linkAdd.Name = "linkAdd";
-            this.linkAdd.Size = new System.Drawing.Size(29, 35);
-            this.linkAdd.TabIndex = 4;
-            this.linkAdd.UseSelectable = true;
-            this.linkAdd.Click += new System.EventHandler(this.linkAdd_Click);
+            this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.btnSimpanTesting);
+            this.groupBox2.Controls.Add(this.btnSimpanTraining);
+            this.groupBox2.Controls.Add(this.metroLabel8);
+            this.groupBox2.Controls.Add(this.tbDataTesting);
+            this.groupBox2.Controls.Add(this.metroLabel7);
+            this.groupBox2.Controls.Add(this.tbDataTraining);
+            this.groupBox2.Controls.Add(this.checkTestingAcak);
+            this.groupBox2.Controls.Add(this.checkTrainingAcak);
+            this.groupBox2.Location = new System.Drawing.Point(3, 108);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(690, 201);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = " Pilih Data ";
             // 
-            // linkEdit
+            // btnSimpanTesting
             // 
-            this.linkEdit.Image = global::PolaC4._5_MetroUI.Properties.Resources.draw;
-            this.linkEdit.ImageSize = 24;
-            this.linkEdit.Location = new System.Drawing.Point(659, 102);
-            this.linkEdit.Name = "linkEdit";
-            this.linkEdit.Size = new System.Drawing.Size(29, 35);
-            this.linkEdit.TabIndex = 5;
-            this.linkEdit.UseSelectable = true;
-            this.linkEdit.Click += new System.EventHandler(this.linkEdit_Click);
+            this.btnSimpanTesting.Enabled = false;
+            this.btnSimpanTesting.Location = new System.Drawing.Point(467, 114);
+            this.btnSimpanTesting.Name = "btnSimpanTesting";
+            this.btnSimpanTesting.Size = new System.Drawing.Size(75, 23);
+            this.btnSimpanTesting.TabIndex = 7;
+            this.btnSimpanTesting.Text = "Simpan";
+            this.btnSimpanTesting.UseSelectable = true;
             // 
-            // linkDelete
+            // btnSimpanTraining
             // 
-            this.linkDelete.Image = global::PolaC4._5_MetroUI.Properties.Resources.close_circular_button_of_a_cross;
-            this.linkDelete.ImageSize = 24;
-            this.linkDelete.Location = new System.Drawing.Point(624, 103);
-            this.linkDelete.Name = "linkDelete";
-            this.linkDelete.Size = new System.Drawing.Size(29, 35);
-            this.linkDelete.TabIndex = 6;
-            this.linkDelete.UseSelectable = true;
-            this.linkDelete.Click += new System.EventHandler(this.linkDelete_Click);
+            this.btnSimpanTraining.Enabled = false;
+            this.btnSimpanTraining.Location = new System.Drawing.Point(86, 114);
+            this.btnSimpanTraining.Name = "btnSimpanTraining";
+            this.btnSimpanTraining.Size = new System.Drawing.Size(75, 23);
+            this.btnSimpanTraining.TabIndex = 6;
+            this.btnSimpanTraining.Text = "Simpan";
+            this.btnSimpanTraining.UseSelectable = true;
             // 
-            // metroButton1
+            // metroLabel8
             // 
-            this.metroButton1.Location = new System.Drawing.Point(3, 28);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 2;
-            this.metroButton1.Text = "Training";
-            this.metroButton1.UseSelectable = true;
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(402, 76);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(59, 19);
+            this.metroLabel8.TabIndex = 5;
+            this.metroLabel8.Text = "Data ke-";
+            // 
+            // tbDataTesting
+            // 
+            // 
+            // 
+            // 
+            this.tbDataTesting.CustomButton.Image = null;
+            this.tbDataTesting.CustomButton.Location = new System.Drawing.Point(154, 1);
+            this.tbDataTesting.CustomButton.Name = "";
+            this.tbDataTesting.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tbDataTesting.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tbDataTesting.CustomButton.TabIndex = 1;
+            this.tbDataTesting.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tbDataTesting.CustomButton.UseSelectable = true;
+            this.tbDataTesting.CustomButton.Visible = false;
+            this.tbDataTesting.Enabled = false;
+            this.tbDataTesting.Lines = new string[0];
+            this.tbDataTesting.Location = new System.Drawing.Point(467, 76);
+            this.tbDataTesting.MaxLength = 32767;
+            this.tbDataTesting.Multiline = true;
+            this.tbDataTesting.Name = "tbDataTesting";
+            this.tbDataTesting.PasswordChar = '\0';
+            this.tbDataTesting.PromptText = "Pilih data";
+            this.tbDataTesting.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbDataTesting.SelectedText = "";
+            this.tbDataTesting.SelectionLength = 0;
+            this.tbDataTesting.SelectionStart = 0;
+            this.tbDataTesting.ShortcutsEnabled = true;
+            this.tbDataTesting.Size = new System.Drawing.Size(176, 23);
+            this.tbDataTesting.TabIndex = 4;
+            this.tbDataTesting.UseSelectable = true;
+            this.tbDataTesting.WaterMark = "Pilih data";
+            this.tbDataTesting.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tbDataTesting.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(21, 76);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(59, 19);
+            this.metroLabel7.TabIndex = 3;
+            this.metroLabel7.Text = "Data ke-";
+            // 
+            // tbDataTraining
+            // 
+            // 
+            // 
+            // 
+            this.tbDataTraining.CustomButton.Image = null;
+            this.tbDataTraining.CustomButton.Location = new System.Drawing.Point(154, 1);
+            this.tbDataTraining.CustomButton.Name = "";
+            this.tbDataTraining.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tbDataTraining.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tbDataTraining.CustomButton.TabIndex = 1;
+            this.tbDataTraining.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tbDataTraining.CustomButton.UseSelectable = true;
+            this.tbDataTraining.CustomButton.Visible = false;
+            this.tbDataTraining.Enabled = false;
+            this.tbDataTraining.Lines = new string[0];
+            this.tbDataTraining.Location = new System.Drawing.Point(86, 76);
+            this.tbDataTraining.MaxLength = 32767;
+            this.tbDataTraining.Multiline = true;
+            this.tbDataTraining.Name = "tbDataTraining";
+            this.tbDataTraining.PasswordChar = '\0';
+            this.tbDataTraining.PromptText = "Pilih data";
+            this.tbDataTraining.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbDataTraining.SelectedText = "";
+            this.tbDataTraining.SelectionLength = 0;
+            this.tbDataTraining.SelectionStart = 0;
+            this.tbDataTraining.ShortcutsEnabled = true;
+            this.tbDataTraining.Size = new System.Drawing.Size(176, 23);
+            this.tbDataTraining.TabIndex = 2;
+            this.tbDataTraining.UseSelectable = true;
+            this.tbDataTraining.WaterMark = "Pilih data";
+            this.tbDataTraining.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tbDataTraining.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // checkTestingAcak
+            // 
+            this.checkTestingAcak.AutoSize = true;
+            this.checkTestingAcak.Checked = true;
+            this.checkTestingAcak.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkTestingAcak.Location = new System.Drawing.Point(406, 34);
+            this.checkTestingAcak.Name = "checkTestingAcak";
+            this.checkTestingAcak.Size = new System.Drawing.Size(143, 15);
+            this.checkTestingAcak.TabIndex = 1;
+            this.checkTestingAcak.Text = "Pilih Acak Data Testing";
+            this.checkTestingAcak.UseSelectable = true;
+            this.checkTestingAcak.CheckedChanged += new System.EventHandler(this.checkTestingAcak_CheckedChanged);
+            // 
+            // checkTrainingAcak
+            // 
+            this.checkTrainingAcak.AutoSize = true;
+            this.checkTrainingAcak.Checked = true;
+            this.checkTrainingAcak.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkTrainingAcak.Location = new System.Drawing.Point(24, 34);
+            this.checkTrainingAcak.Name = "checkTrainingAcak";
+            this.checkTrainingAcak.Size = new System.Drawing.Size(148, 15);
+            this.checkTrainingAcak.TabIndex = 0;
+            this.checkTrainingAcak.Text = "Pilih Acak Data Training";
+            this.checkTrainingAcak.UseSelectable = true;
+            this.checkTrainingAcak.CheckedChanged += new System.EventHandler(this.checkTrainingAcak_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -388,49 +552,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " Pembagian Data ";
             // 
-            // metroLabel3
+            // metroLabel6
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(21, 36);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(130, 19);
-            this.metroLabel3.TabIndex = 0;
-            this.metroLabel3.Text = "Jumlah Data Training";
+            this.metroLabel6.Location = new System.Drawing.Point(643, 37);
+            this.metroLabel6.Margin = new System.Windows.Forms.Padding(0);
+            this.metroLabel6.MaximumSize = new System.Drawing.Size(22, 22);
+            this.metroLabel6.MinimumSize = new System.Drawing.Size(21, 21);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(21, 21);
+            this.metroLabel6.TabIndex = 5;
+            this.metroLabel6.Text = "%";
+            this.metroLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroTextBox1
+            // metroLabel5
             // 
-            // 
-            // 
-            // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(112, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.Lines = new string[] {
-        "80"};
-            this.metroTextBox1.Location = new System.Drawing.Point(157, 36);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.PromptText = "80";
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = false;
-            this.metroTextBox1.ShowButton = true;
-            this.metroTextBox1.ShowClearButton = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(134, 23);
-            this.metroTextBox1.TabIndex = 1;
-            this.metroTextBox1.Text = "80";
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMark = "80";
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroLabel5.Location = new System.Drawing.Point(266, 37);
+            this.metroLabel5.Margin = new System.Windows.Forms.Padding(0);
+            this.metroLabel5.MaximumSize = new System.Drawing.Size(22, 22);
+            this.metroLabel5.MinimumSize = new System.Drawing.Size(21, 21);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(21, 21);
+            this.metroLabel5.TabIndex = 4;
+            this.metroLabel5.Text = "%";
+            this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroTextBox2
             // 
@@ -476,179 +620,82 @@
             this.metroLabel4.TabIndex = 2;
             this.metroLabel4.Text = "Jumlah Data Testing";
             // 
-            // metroLabel5
-            // 
-            this.metroLabel5.Location = new System.Drawing.Point(266, 37);
-            this.metroLabel5.Margin = new System.Windows.Forms.Padding(0);
-            this.metroLabel5.MaximumSize = new System.Drawing.Size(22, 22);
-            this.metroLabel5.MinimumSize = new System.Drawing.Size(21, 21);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(21, 21);
-            this.metroLabel5.TabIndex = 4;
-            this.metroLabel5.Text = "%";
-            this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.Location = new System.Drawing.Point(643, 37);
-            this.metroLabel6.Margin = new System.Windows.Forms.Padding(0);
-            this.metroLabel6.MaximumSize = new System.Drawing.Size(22, 22);
-            this.metroLabel6.MinimumSize = new System.Drawing.Size(21, 21);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(21, 21);
-            this.metroLabel6.TabIndex = 5;
-            this.metroLabel6.Text = "%";
-            this.metroLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.btnSimpanTesting);
-            this.groupBox2.Controls.Add(this.btnSimpanTraining);
-            this.groupBox2.Controls.Add(this.metroLabel8);
-            this.groupBox2.Controls.Add(this.tbDataTesting);
-            this.groupBox2.Controls.Add(this.metroLabel7);
-            this.groupBox2.Controls.Add(this.tbDataTraining);
-            this.groupBox2.Controls.Add(this.checkTestingAcak);
-            this.groupBox2.Controls.Add(this.checkTrainingAcak);
-            this.groupBox2.Location = new System.Drawing.Point(3, 108);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(690, 201);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = " Pilih Data ";
-            // 
-            // checkTrainingAcak
-            // 
-            this.checkTrainingAcak.AutoSize = true;
-            this.checkTrainingAcak.Checked = true;
-            this.checkTrainingAcak.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkTrainingAcak.Location = new System.Drawing.Point(24, 34);
-            this.checkTrainingAcak.Name = "checkTrainingAcak";
-            this.checkTrainingAcak.Size = new System.Drawing.Size(148, 15);
-            this.checkTrainingAcak.TabIndex = 0;
-            this.checkTrainingAcak.Text = "Pilih Acak Data Training";
-            this.checkTrainingAcak.UseSelectable = true;
-            this.checkTrainingAcak.CheckedChanged += new System.EventHandler(this.checkTrainingAcak_CheckedChanged);
-            // 
-            // checkTestingAcak
-            // 
-            this.checkTestingAcak.AutoSize = true;
-            this.checkTestingAcak.Checked = true;
-            this.checkTestingAcak.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkTestingAcak.Location = new System.Drawing.Point(406, 34);
-            this.checkTestingAcak.Name = "checkTestingAcak";
-            this.checkTestingAcak.Size = new System.Drawing.Size(143, 15);
-            this.checkTestingAcak.TabIndex = 1;
-            this.checkTestingAcak.Text = "Pilih Acak Data Testing";
-            this.checkTestingAcak.UseSelectable = true;
-            this.checkTestingAcak.CheckedChanged += new System.EventHandler(this.checkTestingAcak_CheckedChanged);
-            // 
-            // tbDataTraining
+            // metroTextBox1
             // 
             // 
             // 
             // 
-            this.tbDataTraining.CustomButton.Image = null;
-            this.tbDataTraining.CustomButton.Location = new System.Drawing.Point(154, 1);
-            this.tbDataTraining.CustomButton.Name = "";
-            this.tbDataTraining.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tbDataTraining.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tbDataTraining.CustomButton.TabIndex = 1;
-            this.tbDataTraining.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tbDataTraining.CustomButton.UseSelectable = true;
-            this.tbDataTraining.CustomButton.Visible = false;
-            this.tbDataTraining.Enabled = false;
-            this.tbDataTraining.Lines = new string[0];
-            this.tbDataTraining.Location = new System.Drawing.Point(86, 76);
-            this.tbDataTraining.MaxLength = 32767;
-            this.tbDataTraining.Multiline = true;
-            this.tbDataTraining.Name = "tbDataTraining";
-            this.tbDataTraining.PasswordChar = '\0';
-            this.tbDataTraining.PromptText = "Pilih data";
-            this.tbDataTraining.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbDataTraining.SelectedText = "";
-            this.tbDataTraining.SelectionLength = 0;
-            this.tbDataTraining.SelectionStart = 0;
-            this.tbDataTraining.ShortcutsEnabled = true;
-            this.tbDataTraining.Size = new System.Drawing.Size(176, 23);
-            this.tbDataTraining.TabIndex = 2;
-            this.tbDataTraining.UseSelectable = true;
-            this.tbDataTraining.WaterMark = "Pilih data";
-            this.tbDataTraining.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tbDataTraining.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroTextBox1.CustomButton.Image = null;
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(112, 1);
+            this.metroTextBox1.CustomButton.Name = "";
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox1.CustomButton.TabIndex = 1;
+            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox1.CustomButton.UseSelectable = true;
+            this.metroTextBox1.Lines = new string[] {
+        "80"};
+            this.metroTextBox1.Location = new System.Drawing.Point(157, 36);
+            this.metroTextBox1.MaxLength = 32767;
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.PasswordChar = '\0';
+            this.metroTextBox1.PromptText = "80";
+            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox1.SelectedText = "";
+            this.metroTextBox1.SelectionLength = 0;
+            this.metroTextBox1.SelectionStart = 0;
+            this.metroTextBox1.ShortcutsEnabled = false;
+            this.metroTextBox1.ShowButton = true;
+            this.metroTextBox1.ShowClearButton = true;
+            this.metroTextBox1.Size = new System.Drawing.Size(134, 23);
+            this.metroTextBox1.TabIndex = 1;
+            this.metroTextBox1.Text = "80";
+            this.metroTextBox1.UseSelectable = true;
+            this.metroTextBox1.WaterMark = "80";
+            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel7
+            // metroLabel3
             // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(21, 76);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(59, 19);
-            this.metroLabel7.TabIndex = 3;
-            this.metroLabel7.Text = "Data ke-";
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(21, 36);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(130, 19);
+            this.metroLabel3.TabIndex = 0;
+            this.metroLabel3.Text = "Jumlah Data Training";
             // 
-            // metroLabel8
+            // linkAdd
             // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(402, 76);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(59, 19);
-            this.metroLabel8.TabIndex = 5;
-            this.metroLabel8.Text = "Data ke-";
+            this.linkAdd.Image = global::PolaC4._5_MetroUI.Properties.Resources.plus;
+            this.linkAdd.ImageSize = 24;
+            this.linkAdd.Location = new System.Drawing.Point(694, 102);
+            this.linkAdd.Name = "linkAdd";
+            this.linkAdd.Size = new System.Drawing.Size(29, 35);
+            this.linkAdd.TabIndex = 4;
+            this.linkAdd.UseSelectable = true;
+            this.linkAdd.Click += new System.EventHandler(this.linkAdd_Click);
             // 
-            // tbDataTesting
+            // linkEdit
             // 
+            this.linkEdit.Image = global::PolaC4._5_MetroUI.Properties.Resources.draw;
+            this.linkEdit.ImageSize = 24;
+            this.linkEdit.Location = new System.Drawing.Point(659, 102);
+            this.linkEdit.Name = "linkEdit";
+            this.linkEdit.Size = new System.Drawing.Size(29, 35);
+            this.linkEdit.TabIndex = 5;
+            this.linkEdit.UseSelectable = true;
+            this.linkEdit.Click += new System.EventHandler(this.linkEdit_Click);
             // 
+            // linkDelete
             // 
-            // 
-            this.tbDataTesting.CustomButton.Image = null;
-            this.tbDataTesting.CustomButton.Location = new System.Drawing.Point(154, 1);
-            this.tbDataTesting.CustomButton.Name = "";
-            this.tbDataTesting.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tbDataTesting.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tbDataTesting.CustomButton.TabIndex = 1;
-            this.tbDataTesting.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tbDataTesting.CustomButton.UseSelectable = true;
-            this.tbDataTesting.CustomButton.Visible = false;
-            this.tbDataTesting.Enabled = false;
-            this.tbDataTesting.Lines = new string[0];
-            this.tbDataTesting.Location = new System.Drawing.Point(467, 76);
-            this.tbDataTesting.MaxLength = 32767;
-            this.tbDataTesting.Multiline = true;
-            this.tbDataTesting.Name = "tbDataTesting";
-            this.tbDataTesting.PasswordChar = '\0';
-            this.tbDataTesting.PromptText = "Pilih data";
-            this.tbDataTesting.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbDataTesting.SelectedText = "";
-            this.tbDataTesting.SelectionLength = 0;
-            this.tbDataTesting.SelectionStart = 0;
-            this.tbDataTesting.ShortcutsEnabled = true;
-            this.tbDataTesting.Size = new System.Drawing.Size(176, 23);
-            this.tbDataTesting.TabIndex = 4;
-            this.tbDataTesting.UseSelectable = true;
-            this.tbDataTesting.WaterMark = "Pilih data";
-            this.tbDataTesting.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tbDataTesting.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // btnSimpanTraining
-            // 
-            this.btnSimpanTraining.Enabled = false;
-            this.btnSimpanTraining.Location = new System.Drawing.Point(86, 114);
-            this.btnSimpanTraining.Name = "btnSimpanTraining";
-            this.btnSimpanTraining.Size = new System.Drawing.Size(75, 23);
-            this.btnSimpanTraining.TabIndex = 6;
-            this.btnSimpanTraining.Text = "Simpan";
-            this.btnSimpanTraining.UseSelectable = true;
-            // 
-            // btnSimpanTesting
-            // 
-            this.btnSimpanTesting.Enabled = false;
-            this.btnSimpanTesting.Location = new System.Drawing.Point(467, 114);
-            this.btnSimpanTesting.Name = "btnSimpanTesting";
-            this.btnSimpanTesting.Size = new System.Drawing.Size(75, 23);
-            this.btnSimpanTesting.TabIndex = 7;
-            this.btnSimpanTesting.Text = "Simpan";
-            this.btnSimpanTesting.UseSelectable = true;
+            this.linkDelete.Image = global::PolaC4._5_MetroUI.Properties.Resources.close_circular_button_of_a_cross;
+            this.linkDelete.ImageSize = 24;
+            this.linkDelete.Location = new System.Drawing.Point(624, 103);
+            this.linkDelete.Name = "linkDelete";
+            this.linkDelete.Size = new System.Drawing.Size(29, 35);
+            this.linkDelete.TabIndex = 6;
+            this.linkDelete.UseSelectable = true;
+            this.linkDelete.Click += new System.EventHandler(this.linkDelete_Click);
             // 
             // Main
             // 
@@ -669,12 +716,13 @@
             this.tabTransformasi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridNasabahTransformasi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
-            this.tabKlasifikasi.ResumeLayout(false);
+            this.tabTraining.ResumeLayout(false);
+            this.tabTraining.PerformLayout();
             this.tabPengaturan.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -683,7 +731,7 @@
 
         private MetroFramework.Controls.MetroTabControl MainTab;
         private MetroFramework.Controls.MetroTabPage tabNasabah;
-        private MetroFramework.Controls.MetroTabPage tabKlasifikasi;
+        private MetroFramework.Controls.MetroTabPage tabTraining;
         private MetroFramework.Controls.MetroTabPage tabTransformasi;
         private MetroFramework.Controls.MetroGrid DataGridNasabah;
         private MetroFramework.Controls.MetroTabPage tabPengaturan;
@@ -694,7 +742,6 @@
         private MetroFramework.Controls.MetroLink linkDelete;
         private MetroFramework.Controls.MetroGrid DataGridNasabahTransformasi;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroButton metroButton1;
         private System.Windows.Forms.GroupBox groupBox1;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
@@ -711,6 +758,10 @@
         private MetroFramework.Controls.MetroTextBox tbDataTesting;
         private MetroFramework.Controls.MetroButton btnSimpanTraining;
         private MetroFramework.Controls.MetroButton btnSimpanTesting;
+        private MetroFramework.Controls.MetroTabPage tabTesting;
+        private MetroFramework.Controls.MetroListView lvTraining;
+        private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroLabel labelSelectTraining;
     }
 }
 
