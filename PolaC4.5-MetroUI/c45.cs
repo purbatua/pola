@@ -36,6 +36,7 @@ namespace PolaC4._5_MetroUI
 
 
 
+
         public double Entropy()
         {
             double hasil = 0.0;
@@ -68,7 +69,7 @@ namespace PolaC4._5_MetroUI
             return hasil;
         }
 
-        public double Gain(double EntropyTotal,string atribut, double entropy)
+        public double Gain(double EntropyTotal, string atribut, double entropy)
         {
             double hasil = 0.0;
 
@@ -102,22 +103,40 @@ namespace PolaC4._5_MetroUI
         {
             Atribut atr = new Atribut();
 
+           
+
             for(int i = 0; i < atr.attributes.Length; i++)
             {
                 string[] labels = atr.getLabel(atr.attributes[i]);
                 string atribut = atr.attributes[i];
 
+                double _gain = 0;
                 for(int j = 0; j < labels.Length; j++)
                 {
                     string label = labels[j];
 
-                    if(j == (label.Length - 1))
+                    //int total = labelTotal(atribut, label);
+                    //int[] lbl = new int[labels.Length];
+
+                    double entropy = Entropy(atribut, label);
+
+                    if (j == (labels.Length - 1))
                     {
 
-                    }else
-                    {
                         string query = DB.id("training") + ", 1, '" + atribut + "', '" + label + "'," + labelTotal(atribut, label) + "," + T1(atribut, label) + ", " + T2(atribut, label) + ", " + Entropy(atribut, label) + ", 0";
+                        DB.insert("training", query);
+                        _gain += (i2d(labelTotal(atribut, label)) / i2d(trnasabah.count())) * entropy;
 
+                        double Gain = Entropy() - _gain;
+
+                        string queryGain = DB.id("training") + ", 1, '" + atribut + "', '', '', '', '', '', " + Gain;
+                        DB.insert("training", queryGain);
+                    }
+                    else
+                    {
+                        _gain += (i2d(labelTotal(atribut, label)) / i2d(trnasabah.count())) * entropy;
+
+                        string query = DB.id("training") + ", 1, '" + atribut + "', '" + label + "'," + labelTotal(atribut, label) + "," + T1(atribut, label) + ", " + T2(atribut, label) + ", " + Entropy(atribut, label) + ", 0";
                         DB.insert("training", query);
                     }
 
