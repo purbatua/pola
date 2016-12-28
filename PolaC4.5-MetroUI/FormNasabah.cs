@@ -10,13 +10,13 @@ using MetroFramework.Forms;
 
 namespace PolaC4._5_MetroUI
 {
-    public partial class NasabahForm : MetroForm
+    public partial class FormNasabah : MetroForm
     {
         Database db = new Database();
         Main main;
         private bool edit = false;
 
-        public NasabahForm(Main _main)
+        public FormNasabah(Main _main)
         {
             InitializeComponent();
             main = _main;
@@ -82,7 +82,7 @@ namespace PolaC4._5_MetroUI
             tbUmur.Text = args[3];
             tbPinjaman.Text = args[4];
             tbWaktu.Text = args[5];
-            cbAnggunan.SelectedText = args[6];
+            cbAnggunan.SelectedIndex = args[6] == "Tanpa Penjamin" ? 0 : args[6] == "Perorangan" ? 1 : 2;
             tbAngsuran.Text = args[7];
             cbTarget.SelectedIndex = args[8] == "Lancar" ? 0 : 1;
         }

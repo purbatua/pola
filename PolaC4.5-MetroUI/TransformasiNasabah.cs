@@ -52,6 +52,25 @@ namespace PolaC4._5_MetroUI
             return result;
         }
 
+        public int count()
+        {
+            return DB.count(table);
+        }
+
+        public int count(string where)
+        {
+            return DB.count(table, where);
+        }
+
+        public int jumlahLancar(string atribut, string label)
+        {
+            return DB.count(table, "" + atribut + "='" + label + "' AND target='Lancar'");
+        }
+
+        public int jumlahMacet(string atribut, string label)
+        {
+            return DB.count(table, "" + atribut + "='" + label + "' AND target='Macet'");
+        }
 
     }
 }

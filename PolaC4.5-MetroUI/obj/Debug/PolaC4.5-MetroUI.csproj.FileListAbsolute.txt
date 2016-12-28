@@ -15,4 +15,5 @@ F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-Me
 F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-MetroUI\bin\Debug\EntityFramework.SqlServer.dll
 F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-MetroUI\bin\Debug\EntityFramework.xml
 F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-MetroUI\bin\Debug\EntityFramework.SqlServer.xml
-F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-MetroUI\obj\Debug\PolaC4._5_MetroUI.NasabahForm.resources
+F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-MetroUI\obj\Debug\PolaC4._5_MetroUI.FormTraining.resources
+F:\Kuliah\Semester 11\Pengenalan Pola\Final Project\PolaC4.5-MetroUI\PolaC4.5-MetroUI\obj\Debug\PolaC4._5_MetroUI.FormNasabah.resources

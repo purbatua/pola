@@ -11,15 +11,15 @@ namespace PolaC4._5_MetroUI
         {
             string umur = "Muda";
 
-            if (u >= 17 && u <= 40)
+            if (u >= 17 && u <= 35)
             {
                 umur = "Muda";
             }
-            else if (u >= 41 && u <= 55)
+            else if (u >= 36 && u <= 50)
             {
                 umur = "Paruh Baya";
             }
-            else if (u > 55)
+            else if (u >= 51)
             {
                 umur = "Tua";
             }
@@ -35,11 +35,11 @@ namespace PolaC4._5_MetroUI
             {
                 pinjaman = "Kecil";
             }
-            else if(p >= 5000001 && p <= 10000000)
+            else if(p >= 5000001 && p <= 15000000)
             {
                 pinjaman = "Sedang";
             }
-            else if(p > 100000001)
+            else if(p >= 150000001)
             {
                 pinjaman = "Besar";
             }
@@ -55,11 +55,11 @@ namespace PolaC4._5_MetroUI
             {
                 waktu = "Cepat";
             }
-            else if (w >= 13 && w <= 18)
+            else if (w >= 13 && w <= 24)
             {
                 waktu = "Sedang";
             }
-            else if (w > 19)
+            else if (w >= 25)
             {
                 waktu = "Lambat";
             }
@@ -91,15 +91,15 @@ namespace PolaC4._5_MetroUI
         {
             string angsuran = "Kecil";
 
-            if (a <= 100000)
+            if (a <= 300000)
             {
                 angsuran = "Kecil";
             }
-            else if (a >= 100001 && a <= 1000000)
+            else if (a >= 300001 && a <= 1500000)
             {
                 angsuran = "Sedang";
             }
-            else if (a > 1000001)
+            else if (a >= 1500001)
             {
                 angsuran = "Besar";
             }

@@ -1,6 +1,6 @@
 ﻿namespace PolaC4._5_MetroUI
 {
-    partial class NasabahForm
+    partial class FormNasabah
     {
         /// <summary>
         /// Required designer variable.

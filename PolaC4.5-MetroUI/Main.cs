@@ -67,7 +67,7 @@ namespace PolaC4._5_MetroUI
 
         private void linkAdd_Click(object sender, EventArgs e)
         {
-            NasabahForm formNasabah = new NasabahForm(this);
+            FormNasabah formNasabah = new FormNasabah(this);
             formNasabah.ShowDialog();
             formNasabah.Dispose();
         }
@@ -81,7 +81,7 @@ namespace PolaC4._5_MetroUI
 
             string[] nasabah = db.find(id, "nasabah");
 
-            NasabahForm formNasabah = new NasabahForm(this);
+            FormNasabah formNasabah = new FormNasabah(this);
             formNasabah.Edit(nasabah);
 
             formNasabah.ShowDialog();
@@ -101,16 +101,24 @@ namespace PolaC4._5_MetroUI
                 Nasabah nasabah = new Nasabah();
                 TransformasiNasabah trnasabah = new TransformasiNasabah();
 
-                nasabah.remove(id);
-                trnasabah.remove(id);
+                if(nasabah.remove(id))
+                {
+                    if (trnasabah.remove(id))
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                        RefreshDataGrid();
+                    }
+                    else
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "Data gagal dihapus", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "Data gagal dihapus", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
-            {
 
-            }
-
-
-            
         }
 
         public void RefreshDataGrid()
@@ -144,8 +152,10 @@ namespace PolaC4._5_MetroUI
                     db.LoadToDataGrid("nasabah_trans", DataGridNasabahTransformasi);
                     break;
                 case 2: // Training
+                    lvTraining.Clear();
                     lvTraining.BeginUpdate();
                     lvTraining.Items.Clear();
+
                     lvTraining.View = View.Details;
 
                     lvTraining.Columns.Add("#");
@@ -167,7 +177,6 @@ namespace PolaC4._5_MetroUI
 
                     string[][] listItems = trnasabah.all();
 
-                    //Console.WriteLine(listItems);
 
                     for (int i = 0; i < listItems.Length; i++)
                     {
@@ -182,7 +191,6 @@ namespace PolaC4._5_MetroUI
                         lvi = new ListViewItem(data);
 
                         lvTraining.Items.Add(lvi);
-                        lvTraining.Items[0].Checked = true;
 
 
 
@@ -193,6 +201,9 @@ namespace PolaC4._5_MetroUI
 
                         //Console.WriteLine("");
                     }
+
+                    lvTraining.Items[0].Checked = true;
+
 
                     lvTraining.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
                     lvTraining.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
@@ -235,6 +246,74 @@ namespace PolaC4._5_MetroUI
             }
         }
 
-        
+        private void btnTraining_Click(object sender, EventArgs e)
+        {
+            //FormTraining formTraining = new FormTraining();
+
+            //formTraining.ShowDialog();
+            //formTraining.Dispose();
+
+            C45 c45 = new C45();
+
+            if(c45.Training())
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Sukses");
+            }
+
+            //int count = lvTraining.CheckedItems.Count;
+
+            //ListView.CheckedListViewItemCollection collection = lvTraining.CheckedItems;
+
+
+            //TransformasiNasabah trnasabah = new TransformasiNasabah();
+
+
+            //string[][] listItems = trnasabah.all();
+            //string[] id = new string[collection.Count];
+
+            //for (int i = 0; i < listItems.Length; i++)
+            //{
+            //    string[] data = new string[trnasabah.attributes.Length];
+
+            //    for (int j = 0; j < listItems[0].Length; j++)
+            //    {
+            //        data[j] = listItems[i][j];
+            //    }
+
+            //    ListViewItem lvi = new ListViewItem(data);
+
+            //    if (collection.Contains(lvi))
+            //    {
+            //        id[i] = lvi.Text;
+            //        Console.WriteLine(id[i]);
+            //    }
+
+            //    //lvTraining.Items.Add(lvi);
+            //}
+
+
+
+
+
+
+
+
+            //Console.WriteLine("Checked: " + lvTraining.CheckedItems.ToString());
+        }
+
+        private void lvTraining_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            ListView.CheckedListViewItemCollection checkedItem = lvTraining.CheckedItems;
+
+
+            string[] aray;
+
+            List<Nasabah> list = new List<Nasabah>();
+
+            ///checkedItem.CopyTo(aray, 1);
+
+
+            Console.WriteLine();
+        }
     }
 }

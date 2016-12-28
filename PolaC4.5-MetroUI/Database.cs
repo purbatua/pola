@@ -377,9 +377,9 @@ namespace PolaC4._5_MetroUI
             return count;
         }
 
-        public int count(string tabel, string where)
+        public int count(string table, string where)
         {
-            string query = "SELECT COUNT(*) FROM " + tabel + " WHERE " + where;
+            string query = "SELECT COUNT(*) FROM " + table + " WHERE " + where;
             int count = 0;
 
             try
